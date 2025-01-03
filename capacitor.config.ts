@@ -1,9 +1,16 @@
-import type { CapacitorConfig } from '@capacitor/cli';
+import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
   appName: 'any-task-app',
-  webDir: 'dist'
+  webDir: 'build',
+  plugins: {
+    SplashScreen: {
+      launchShowDuration: 3000,
+      backgroundColor: "#ffffff",
+      showSpinner: false,
+    },
+  },
 };
 
 export default config;
